@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compte Créé - CyberTech</title>
+    <style>
+        /* Définition d'une police moderne */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f6; /* Un gris très clair, reposant */
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Prend toute la hauteur de l'écran */
+        }
+
+        .success-card {
+            background: white;
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.05); /* Ombre très douce pour un effet "premium" */
+            text-align: center;
+            width: 90%;
+            max-width: 450px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: slideIn 0.6s ease-out forwards; /* Petite animation d'arrivée */
+        }
+
+        /* L'icône de succès (le "check") */
+        .check-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #d1fae5; /* Vert très clair */
+            color: #10b981; /* Vert "CyberTech" */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: bold;
+            margin: 0 auto 30px auto;
+            position: relative;
+        }
+
+        /* Petit effet d'anneau qui pulse autour du check */
+        .check-icon::after {
+            content: '';
+            position: absolute;
+            width: 100%; height: 100%;
+            border-radius: 50%;
+            border: 4px solid #d1fae5;
+            animation: pulseRing 1.5s infinite;
+        }
+
+        h1 {
+            color: #111827; /* Presque noir, plus doux */
+            font-size: 26px;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        p {
+            color: #6b7280; /* Gris moyen pour le texte */
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 35px;
+        }
+
+        .btn-connect {
+            display: inline-block;
+            background-color: #667eea; /* Bleu pro */
+            color: white;
+            text-decoration: none;
+            padding: 14px 30px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(102, 126, 234, 0.2);
+        }
+
+        .btn-connect:hover {
+            background-color: #5a67d8; /* Plus sombre au survol */
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(102, 126, 234, 0.3);
+        }
+
+        /* Les animations CSS */
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes pulseRing {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(1.3); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="success-card">
+        <div class="check-icon">✓</div>
+        <h1>Félicitations Ibrahim !</h1>
+        <p>Votre compte CyberTech a été créé avec succès.<br>Vous pouvez maintenant accéder à votre espace.</p>
+        <a href="/" class="btn-connect">Se connecter maintenant</a>
+    </div>
+</body>
+</html>

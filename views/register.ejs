@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Créer un compte - CyberTech</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); height: 100vh; display: flex; align-items: center; justify-content: center; margin: 0; }
+        .card { background: white; padding: 40px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.2); width: 350px; text-align: center; }
+        h2 { color: #2d3748; margin-bottom: 10px; font-size: 24px; }
+        p { color: #718096; margin-bottom: 30px; font-size: 14px; }
+        input { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #e2e8f0; border-radius: 8px; box-sizing: border-box; outline: none; transition: 0.3s; }
+        input:focus { border-color: #667eea; box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1); }
+        button { width: 100%; padding: 12px; background: #667eea; color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; transition: 0.3s; }
+        button:hover { background: #5a67d8; transform: translateY(-1px); }
+        .footer-link { margin-top: 20px; font-size: 13px; color: #718096; }
+        .footer-link a { color: #667eea; text-decoration: none; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Bienvenue !</h2>
+        <p>Créez votre compte CyberTech</p>
+        <form action="/register" method="POST">
+            <input type="email" name="email" placeholder="Email professionnel" required>
+            <input type="password" name="password" placeholder="Mot de passe" required>
+            <button type="submit">S'inscrire gratuitement</button>
+        </form>
+        <div class="footer-link">
+            Déjà inscrit ? <a href="/">Se connecter</a>
+        </div>
+    </div>
+</body>
+</html>

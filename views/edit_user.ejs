@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Modifier Candidat - CyberTech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <div class="card shadow">
+            <div class="card-header bg-warning text-dark">
+                <h3 class="mb-0">Modifier les informations de <%= user.prenom %> <%= user.nom %></h3>
+            </div>
+            <div class="card-body">
+                <form action="/update-user/<%= user.id %>" method="POST">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Nom</label>
+                            <input type="text" name="nom" value="<%= user.nom %>" class="form-control" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Prénom</label>
+                            <input type="text" name="prenom" value="<%= user.prenom %>" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Numéro de Téléphone</label>
+                        <input type="text" name="telephone" value="<%= user.telephone %>" class="form-control" placeholder="+223..." required>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Lieu de Naissance</label>
+                            <input type="text" name="lieu_naissance" value="<%= user.lieu_naissance %>" class="form-control" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label">Date de Naissance</label>
+                            <input type="date" name="date_naissance" value="<%= user.date_naissance.toISOString().split('T')[0] %>" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <button type="submit" class="btn btn-success">Enregistrer les modifications</button>
+                        <a href="/admin" class="btn btn-secondary">Annuler</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
