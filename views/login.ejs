@@ -2,81 +2,20 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion - CyberTech</title>
-    <style>
-        body { 
-            font-family: 'Segoe UI', sans-serif; 
-            display: flex; 
-            justify-content: center; 
-            padding-top: 100px; 
-            background: #f0f2f5; 
-            margin: 0;
-        }
-        .box { 
-            background: white; 
-            padding: 30px; 
-            border-radius: 12px; 
-            box-shadow: 0 8px 24px rgba(0,0,0,0.1); 
-            width: 320px;
-        }
-        h2 { 
-            text-align: center; 
-            color: #1c1e21; 
-            margin-bottom: 25px;
-        }
-        input { 
-            display: block; 
-            width: 100%; 
-            margin-bottom: 15px; 
-            padding: 12px; 
-            box-sizing: border-box; 
-            border: 1px solid #dddfe2; 
-            border-radius: 6px;
-            font-size: 14px;
-        }
-        button { 
-            width: 100%; 
-            padding: 12px; 
-            background: #27ae60; 
-            color: white; 
-            border: none; 
-            border-radius: 6px; 
-            cursor: pointer; 
-            font-size: 16px; 
-            font-weight: bold; 
-        }
-        button:hover { 
-            background: #219150; 
-        }
-        .footer-links {
-            text-align: center;
-            margin-top: 20px;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
-        }
-        .link-register { 
-            text-decoration: none; 
-            color: #3498db; 
-            font-size: 14px; 
-            font-weight: 500;
-        }
-        .link-register:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div class="box">
+    <div class="container">
         <h2>CyberTech Login</h2>
         <form action="/login" method="POST">
             <input type="email" name="email" placeholder="Adresse Email" required>
             <input type="password" name="password" placeholder="Mot de passe" required>
             <button type="submit">Se connecter</button>
         </form>
-
-        <div class="footer-links">
-            <a href="/register" class="link-register">Pas encore de compte ? Créer un compte</a>
-        </div>
+        <br>
+        <a href="/register">Pas encore de compte ? Créer un compte</a>
     </div>
 </body>
 </html>
